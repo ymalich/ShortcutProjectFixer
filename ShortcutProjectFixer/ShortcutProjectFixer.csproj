@@ -4,7 +4,7 @@
     <OutputType>Exe</OutputType>
     <TargetFrameworks>net472;netcoreapp2.1</TargetFrameworks>
     <Company>Yury Malich</Company>
-    <Description>Fixes clip lengths in project files  of Shortcut video editor</Description>
+    <Description>This command-line tool fixes clip lengths in project files of the Shortcut video editor</Description>
     <Copyright>Yury Malich</Copyright>
   </PropertyGroup>
 

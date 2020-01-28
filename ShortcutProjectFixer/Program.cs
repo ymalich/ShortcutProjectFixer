@@ -14,8 +14,8 @@ namespace ShortcutProjectFixer
                 if (args.Length < 1)
                 {
                     Console.WriteLine("Usage:");
-                    Console.WriteLine("ShortcutProjectFixer <mlt-file>.");
-                    Console.WriteLine("Presse <Enter> to exit.");
+                    Console.WriteLine("ShortcutProjectFixer.exe \"<mlt-file>\"");
+                    Console.WriteLine("Press <Enter> to exit.");
                     Console.ReadKey();
                     return;
                 }
