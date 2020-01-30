@@ -32,13 +32,21 @@ namespace ShortcutProjectFixer
                     return;
                 }
 
-                var strFrameRate = doc.Root.Element("profile")?.Attribute("frame_rate_num")?.Value;
+                var strFrameRateNum = doc.Root.Element("profile")?.Attribute("frame_rate_num")?.Value;
 
-                if (!int.TryParse(strFrameRate, out var frameRate))
+                if (!double.TryParse(strFrameRateNum, out var frameRate))
                 {
                     Console.WriteLine("frame_rate_num attribute is not found.");
                     return;
                 }
+
+                var strFrameRateDen = doc.Root.Element("profile")?.Attribute("frame_rate_den")?.Value;
+                if (!double.TryParse(strFrameRateDen, out var frameRateDen))
+                {
+                    frameRateDen = 1;
+                }
+
+                frameRate = frameRate / frameRateDen;
 
                 var producers = doc.Root.Elements("producer");
                 foreach (var producer in producers)
